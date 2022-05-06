@@ -115,6 +115,8 @@
 </footer>
 </div>
 
+<script src="<?php bloginfo('template_directory');?>/js/player.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/curated.embed.js"></script>
 <script src="<?php bloginfo('template_directory');?>/js/script.min.js"></script>
 <!-- <script src="<?php bloginfo('template_directory');?>/js/custom.js"></script> -->
 
