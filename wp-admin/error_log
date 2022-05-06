@@ -1,0 +1,1 @@
+[25-Nov-2021 14:02:43 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 102775832 bytes) in /home/rouk1cqimajv/public_html/projects/magic-sparkle/wp-includes/Requests/Transport/cURL.php on line 505

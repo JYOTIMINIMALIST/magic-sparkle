@@ -1,0 +1,853 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+* {margin: 0;padding: 0;border: 0;box-sizing: border-box;line-height: 1.3; outline: none;font-weight: 300;color: #18191F;font-family: 'Rubik', sans-serif;}
+html,body{background: #fff;overflow-x: hidden;scroll-behavior: smooth;overflow-x: hidden;}
+/*body{opacity: 0;}*/
+ul,ol,li,h1,h2,h3,h4,h5,h6,a,p {text-decoration: none;list-style: none;margin: 0;outline: none;}
+img {max-width: 100%;display: block;}
+a:hover{text-decoration: none;color: inherit;outline: none;}
+button{outline: none;}
+.wrapper{padding: 0 115px;position: relative;}
+
+/************************************************ Common CSS **************************************************/
+.playfair{font-family: 'Playfair Display', serif;}
+.rubik{font-family: 'Rubik', sans-serif;}
+.font95{font-size: 95px;}
+.font60{font-size: 60px;}
+.font40{font-size: 40px;}
+.font28{font-size: 28px;}
+.font24{font-size: 24px;}
+.font20{font-size: 20px;}
+.font18{font-size: 18px;}
+.font16{font-size: 16px;}
+.font14{font-size: 14px;}
+.fontW300{font-weight: 300;}
+.fontW400{font-weight: 400;}
+.fontW500{font-weight: 500;}
+.fontW600{font-weight: 600;}
+.fontW700{font-weight: 700;}
+.fontW800{font-weight: 800;}
+
+.colorGy{color: #18191F;}
+.colorW{color: #fff;}
+.ctaOne{border: 1px solid #fff;box-sizing: border-box;border-radius: 5px;display: inline-block;padding: 12px 30px;color: #fff;transition: 0.5s all ease-in-out;letter-spacing: 0.15em;text-transform: uppercase;}
+.ctaOne:hover{background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);color: #fff;transition: 0.5s all ease-in-out;box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);}
+.ctaTwo{border: 1px solid #912CEA;box-sizing: border-box;border-radius: 5px;display: inline-block;padding: 12px 30px;color: #912CEA;transition: 0.5s all ease-in-out;letter-spacing: 0.15em;text-transform: uppercase;background: transparent;}
+.ctaTwo:hover{background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);color: #fff;transition: 0.5s all ease-in-out;box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);}
+.ctaThree {text-transform: uppercase; letter-spacing: 0.15em; background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);border-radius: 5px;padding: 12px 35px;display: inline-block;border: 1px solid transparent;transition: 0.3s all ease-in-out;color: #fff;}
+.ctaThree:hover {border: 1px solid #912CEA;color: #912CEA;background: transparent;box-shadow: 1px 0px 20px rgb(193 8 251 / 50%);}
+.slick-track{display: flex !important;}
+.slick-slide{height: inherit !important;}
+.slick-disabled{opacity: 0.2;}
+.fancybox-button{/*background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);*/border-radius: 50%;}
+.fancybox-button svg path{fill: #fff;stroke: #fff;}
+.fancybox-toolbar{top: 7%;right: 5%;}
+
+
+.sparkleCustom{position: relative;}
+.sparkleCustom:before{content: '';width: 30px;height: 30px;background: url(../images/sparkle-top.png) top left no-repeat;background-size: contain;position: absolute;top: -15px;right: -25px;animation: blink 3s linear infinite;opacity:0;visibility:hidden;}
+.sparkleCustom:after{content: '';width: 30px;height: 30px;background: url(../images/sparkle-bottom.png) top left no-repeat;background-size: contain;position: absolute;bottom: -15px;left: -25px;opacity:0;visibility:hidden;transition-delay:0.2s;animation: blink2 3s linear infinite;}
+.sparkleCustom:hover:before{opacity:1;visibility:visible;}
+.sparkleCustom:hover:after{opacity:1;visibility:visible;}
+@keyframes blink{
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+@keyframes blink2{
+	0% { opacity: 0.0; }
+	50% { opacity: 1.0; }
+	100% { opacity: 0.0; }
+}
+
+/************************************************ HEADER **************************************************/
+header{position: fixed;z-index: 1;width: 100%;padding: 25px 0px;}
+header .logoBox img{width: 100px;}
+#header{position: fixed;width: 100%;z-index: 101;top:0;left: 0;right: 0;padding: 25px 0px;} 
+#header .wrapper{display: flex;align-items: center;justify-content: space-between;} 
+#header.scroll{background: rgba(0, 0, 0, 0.8)}
+#header .logo {display: block;text-decoration: none;position: relative;}
+#header .logo img, #header .custom-logo-link img{width: 100px !important;height:auto;}
+.menuHolder{display: flex;align-items: center;background-color: transparent;}
+#header .menuHolder a{color: #fff;margin-right: 60px;position: relative;letter-spacing: 0.15em;}
+#header .menuHolder a:before{content: '';position: absolute;bottom: -3px;left: 0px;background: #fff;width: 0%;height: 2px;transition: .5s all ease-in-out;}
+#header .menuHolder a:hover{color: #fff;}
+#header .menuHolder a:hover:before{width: 100%;}
+#header:before{content: '';width: 100%;height: 0px;background: #fff;box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);position: absolute;top: 0;left: 0;transition: .3s all ease-in;}
+#header.active:before{height: 90px;}
+#header.active .menuHolder {margin-bottom: 40px;transition: .3s all ease-in;}
+#header.innerHeader .menuHolder a{color: #000!important;}
+#header.innerHeader .menuHolder a:before{background: #000!important;}
+
+#header.innerHeader .menuHolder .contactUsCta{border: 1px solid #000;}
+#header.innerHeader .btn2 .icon, #header.innerHeader .btn2 .icon:before, #header.innerHeader .btn2 .icon:after{background: #000;}
+#header.innerHeader .btn2.open .icon{background: transparent;}
+.page-template-where-to-buy #header.innerHeader .menuHolder a, .page-template-trade-customer #header.innerHeader .menuHolder a, .page-template-retail #header.innerHeader .menuHolder a, .page-template-wholesale #header.innerHeader .menuHolder a, .page-template-our-products #header.innerHeader .menuHolder a, .page-template-how-to-apply #header.innerHeader .menuHolder a, .page-template-media-blogs-details #header.innerHeader .menuHolder a, .page-template-media-blogs #header.innerHeader .menuHolder a, .single-post #header.innerHeader .menuHolder a{color: #fff !important;}
+.page-template-where-to-buy #header.innerHeader .menuHolder a:before, .page-template-trade-customer #header.innerHeader .menuHolder a:before, .page-template-retail #header.innerHeader .menuHolder a:before, .page-template-wholesale #header.innerHeader .menuHolder a:before, .page-template-our-products #header.innerHeader .menuHolder a:before, .page-how-to-apply #header.innerHeader .menuHolder a:before, .page-template-media-blogs-details #header.innerHeader .menuHolder a:before, .page-template-media-blogs #header.innerHeader .menuHolder a:before, .single-post #header.innerHeader .menuHolder a:before{background: #fff!important;}
+.page-template-where-to-buy #header.innerHeader.active .menuHolder a:before, .page-template-trade-customer #header.innerHeader.active .menuHolder a:before, .page-template-retail #header.innerHeader.active .menuHolder a:before, .page-template-wholesale #header.innerHeader.active .menuHolder a:before, .page-template-our-products #header.innerHeader.active .menuHolder a:before, .page-template-how-to-apply #header.innerHeader.active .menuHolder a:before, .page-template-media-blogs #header.innerHeader.active .menuHolder a:before, .page-template-media-blogs-details #header.innerHeader.active .menuHolder a:before, .single-post #header.innerHeader.active .menuHolder a:before{background: #000 !important;}
+.page-template-where-to-buy #header.innerHeader .menuHolder .contactUsCta, .page-template-trade-customer #header.innerHeader .menuHolder .contactUsCta, .page-template-retail #header.innerHeader .menuHolder .contactUsCta, .page-template-wholesale #header.innerHeader .menuHolder .contactUsCta, .page-template-our-products #header.innerHeader .menuHolder .contactUsCta, .page-template-how-to-apply #header.innerHeader .menuHolder .contactUsCta, .page-template-media-blogs #header.innerHeader .menuHolder .contactUsCta, .page-template-media-blogs-details #header.innerHeader .menuHolder .contactUsCta, .single-post #header.innerHeader .menuHolder .contactUsCta{border: 1px solid #fff;}
+.page-template-where-to-buy #header.innerHeader .btn2 .icon, .page-template-where-to-buy #header.innerHeader .btn2 .icon:before, .page-template-where-to-buy #header.innerHeader .btn2 .icon:after, .page-template-trade-customer #header.innerHeader .btn2 .icon, .page-template-trade-customer #header.innerHeader .btn2 .icon:before, .page-template-trade-customer #header.innerHeader .btn2 .icon:after, .page-template-retail #header.innerHeader .btn2 .icon, .page-template-retail #header.innerHeader .btn2 .icon:before, .page-template-retail #header.innerHeader .btn2 .icon:after, .page-template-wholesale #header.innerHeader .btn2 .icon, .page-template-wholesale #header.innerHeader .btn2 .icon:before, .page-template-wholesale #header.innerHeader .btn2 .icon:after, .page-template-our-products #header.innerHeader .btn2 .icon, .page-template-our-products #header.innerHeader .btn2 .icon:before, .page-template-our-products #header.innerHeader .btn2 .icon:after, .page-template-how-to-apply #header.innerHeader .btn2 .icon, .page-template-how-to-apply #header.innerHeader .btn2 .icon:before, .page-template-how-to-apply #header.innerHeader .btn2 .icon:after, .page-template-media-blogs #header.innerHeader .btn2 .icon, .page-template-media-blogs #header.innerHeader .btn2 .icon:before, .page-template-media-blogs #header.innerHeader .btn2 .icon:after, .page-template-media-blogs-details #header.innerHeader .btn2 .icon, .page-template-media-blogs-details #header.innerHeader .btn2 .icon:before, .page-template-media-blogs-details #header.innerHeader .btn2 .icon:after, .single-post #header.innerHeader .btn2 .icon, .single-post #header.innerHeader .btn2 .icon:before, .single-post #header.innerHeader .btn2 .icon:after{background: #fff;}
+.page-template-where-to-buy #header.innerHeader .btn2.open .icon, .page-template-trade-customer #header.innerHeader .btn2.open .icon, .page-template-retail #header.innerHeader .btn2.open .icon, .page-template-wholesale #header.innerHeader .btn2.open .icon, .page-template-our-products #header.innerHeader .btn2.open .icon, .page-template-how-to-apply #header.innerHeader .btn2.open .icon, .page-template-media-blogs #header.innerHeader .btn2.open .icon, .page-template-media-blogs-details #header.innerHeader .btn2.open .icon, .single-post #header.innerHeader .btn2.open .icon{background: transparent;}
+.page-template-where-to-buy #header.innerHeader.active .menuHolder a, .page-template-trade-customer #header.innerHeader.active .menuHolder a, .page-template-retail #header.innerHeader.active .menuHolder a, .page-template-wholesale #header.innerHeader.active .menuHolder a, .page-template-our-products #header.innerHeader.active .menuHolder a, .page-template-how-to-apply #header.innerHeader.active .menuHolder a, .page-template-media-blogs #header.innerHeader.active .menuHolder a, .page-template-media-blogs-details #header.innerHeader.active .menuHolder a, .single-post #header.innerHeader.active .menuHolder a{color: #000 !important;}
+.page-template-where-to-buy #header.innerHeader.active .menuHolder .contactUsCta, .page-template-trade-customer #header.innerHeader.active .menuHolder .contactUsCta, .page-template-retail #header.innerHeader.active .menuHolder .contactUsCta, .page-template-wholesale #header.innerHeader.active .menuHolder .contactUsCta, .page-template-our-products #header.innerHeader.active .menuHolder .contactUsCta, .page-template-how-to-apply #header.innerHeader.active .menuHolder .contactUsCta, .page-template-media-blogs #header.innerHeader.active .menuHolder .contactUsCta, .page-template-media-blogs-details #header.innerHeader.active .menuHolder .contactUsCta, .single-post #header.innerHeader.active .menuHolder .contactUsCta{border: 1px solid #000;}
+.page-template-where-to-buy #header.innerHeader.active .btn2 .icon, .page-template-where-to-buy #header.innerHeader.active .btn2 .icon:before, .page-template-where-to-buy #header.innerHeader.active .btn2 .icon:after, .page-template-trade-customer #header.innerHeader.active .btn2 .icon, .page-template-trade-customer #header.innerHeader.active .btn2 .icon:before, .page-template-trade-customer #header.innerHeader.active .btn2 .icon:after, .page-template-retail #header.innerHeader.active .btn2 .icon, .page-template-retail #header.innerHeader.active .btn2 .icon:before, .page-template-retail #header.innerHeader.active .btn2 .icon:after, .page-template-wholesale #header.innerHeader.active .btn2 .icon, .page-template-wholesale #header.innerHeader.active .btn2 .icon:before, .page-template-wholesale #header.innerHeader.active .btn2 .icon:after, .page-template-our-products #header.innerHeader.active .btn2 .icon, .page-template-our-products #header.innerHeader.active .btn2 .icon:before, .page-template-our-products #header.innerHeader.active .btn2 .icon:after, .page-template-how-to-apply #header.innerHeader.active .btn2 .icon, .page-template-how-to-apply #header.innerHeader.active .btn2 .icon:before, .page-template-how-to-apply #header.innerHeader.active .btn2 .icon:after, .page-template-media-blogs #header.innerHeader.active .btn2 .icon, .page-template-media-blogs #header.innerHeader.active .btn2 .icon:before, .page-template-media-blogs #header.innerHeader.active .btn2 .icon:after, .page-template-media-blogs-details #header.innerHeader.active .btn2 .icon, .page-template-media-blogs-details #header.innerHeader.active .btn2 .icon:before, .page-template-media-blogs-details #header.innerHeader.active .btn2 .icon:after, .single-post #header.innerHeader.active .btn2 .icon:before, .single-post #header.innerHeader.active .btn2 .icon:after{background: #000;}
+.page-template-where-to-buy #header.innerHeader.active .btn2.open .icon, .page-template-trade-customer #header.innerHeader.active .btn2.open .icon, .page-template-retail #header.innerHeader.active .btn2.open .icon, .page-template-wholesale #header.innerHeader.active .btn2.open .icon, .page-template-our-products #header.innerHeader.active .btn2.open .icon, .page-template-how-to-apply #header.innerHeader.active .btn2.open .icon, .page-template-media-blogs #header.innerHeader.active .btn2.open .icon, .page-template-media-blogs-details #header.innerHeader.active .btn2.open .icon, .single-post #header.innerHeader.active .btn2.open .icon{background: transparent;}
+.contactUsCta{text-align: center;border: 1px solid #FFFFFF;box-sizing: border-box;border-radius: 5px;padding: 10px 25px;color: #FFFFFF;display: inline-block;margin-right: 60px;letter-spacing: 1px;}
+.contactUsCta:hover{border: 1px solid #912CEA !important;background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);color: #fff;transition: 0.5s all ease-in-out;box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);}
+.contactUsCta:before{display: none;}
+#menu {background: linear-gradient(271.08deg, #932AEB 1.86%, #CC01FF 98.14%);height: 100%;left: 0;opacity: 0;overflow: hidden;position: fixed;top: 0;transition: all 0.7s ease-in-out;visibility: hidden;width: 100%;z-index: 1100;}
+#menu.open {opacity: 1;visibility: visible;}
+#menu .toplogo {padding: 25px 0px;}
+.hamburgerHolder{position: relative;width: 40px;height: 50px;background-color: transparent;cursor: pointer;}
+.btn2 {position: absolute;width: 40px;height: 50px;transition-duration: 0.5s;z-index: 1110;background-color: transparent;}
+.btn2 .icon {transition-duration: 0.3s;position: absolute;height: 3px;width: 30px;top: 24px;background-color: #FFF;border-radius: 5px;}
+.btn2 .icon.blackBG{background: #000 !important;}
+.btn2 .icon.blackBG:before{background: #000 !important;}
+.btn2 .icon.blackBG:after{background: #000 !important;}
+.btn2 .icon:before {transition-duration: 0.5s;position: absolute;width: 40px;height: 3px;background-color: #FFF;content: "";top: -11.5px;border-radius: 5px;right: 0;}
+.btn2 .icon:after {transition-duration: 0.5s;position: absolute;width: 20px;height: 3px;background-color: #FFF;content: "";top: 12px;border-radius: 5px;right: 0;}
+.btn2.open .icon {transition-duration: 0.5s;background: transparent;}
+.btn2.open .icon.blackBG {background: transparent !important;}
+.btn2.open .icon:before {transform: rotateZ(45deg) scaleX(1.25) translate(4px, 13px);width: 30px;}
+.btn2.open .icon:after {transform: rotateZ(-45deg) scaleX(1.25) translate(3px, -12px);width: 30px;}
+.main-nav{padding-top: 50px;}
+.main-nav a{line-height: 1 !important;position: relative;}
+.main-nav a:before{content: '';position: absolute;bottom: -1px;left: 0px;background: #fff;width: 0%;height: 2px;transition: .5s all ease-in-out;}
+.main-nav a:hover{color: #fff;}
+.main-nav a:hover:before{width: 100%;}
+.main-nav .wrapper{display: flex;flex-flow: wrap;justify-content: space-between;align-items: flex-start !important;}
+.main-nav .baseMenu{width: 30%;}
+.main-nav .baseMenu ul li{margin-bottom: 50px;line-height:1px;}
+.main-nav .baseMenu ul li a{position: relative;color:#fff;font-family: 'Playfair Display', serif;}
+.main-nav .productMenu{width: 65%;}
+.main-nav .productMenu h3{margin-bottom: 50px;}
+.main-nav .productMenu .productsubMenu{display: flex;flex-flow: row;margin-bottom: 75px;}
+.main-nav .productMenu .productsubMenu li{margin-right: 20px;line-height:1;}
+.main-nav .productMenu .productsubMenu li a{letter-spacing: 0.15em;color:#fff;}
+
+.nav-footer {position: absolute;bottom: 0px;left: 0;width: 100%;border-top: 1px solid #fff;padding: 60px 0px;}
+.nav-footer .wrapper{display: flex;flex-flow: wrap;}
+.nav-footer .headersocialSites ul{display: flex;flex-flow: row;}
+.nav-footer .headersocialSites ul li{margin-right: 40px;}
+.nav-footer .headersocialSites ul li a img, .nav-footer .headersocialSites ul li a svg{width: 35px;}
+.nav-footer .headerContactdetails ul{display: flex;flex-flow: wrap;}
+.nav-footer .headerContactdetails ul li{margin-right: 30px;padding-left: 30px;}
+
+.navInnerFooter{display: flex;align-items: center;justify-content: flex-end;padding: 0 50px;}
+.navInnerFooter a{color: rgba(255, 255, 255, 0.5);margin-right: 15px;display: block;}
+.navInnerFooter ul{display: flex;align-items: center;}
+.navInnerFooter ul li{margin-right: 20px;}
+.navInnerFooter ul li:last-child{margin-right: 0px;}
+.mobileMenu{display: none;}
+.logoMenuHolder{display: flex;align-items: center;}
+
+/************************************************ HOMEPAGE **************************************************/
+#fp-nav{right: 0px;margin: 0!important;}
+#fp-nav ul li .fp-tooltip{right: 20px;color: #fff;top:-3px;}
+#fp-nav{padding-left: 10px;min-width: 80px;}
+#fp-nav ul{margin-right: 10px;margin-left: 10px;}
+#fp-nav ul li a.active + .fp-tooltip{width: auto;opacity: 1;}
+.fancybox-button--zoom{display: none !important;}
+#fullpage .section:nth-child(odd){background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);}
+#fullpage .section:nth-child(even){background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);}
+#fullpage .section:last-child{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);}
+/*#fp-nav ul li a span, .fp-slidesNav ul li a span{background: #fff;}*/
+.BannerSection {cursor: url(../images/banner-cursor.png), auto;}
+.BannerSection .wrapper{height: 100%;cursor: url('http://localhost/magic-sparkle/wp-content/themes/magic-sparkle/images/banner-cursor.png'), auto;}
+.BannerSection .bannerHeading{width: 50%;position: absolute;top: 50%;transform: translateY(-50%);z-index: 1;}
+.BannerSection .bannerIconSec{width: 32%;position: absolute;bottom: 8%;z-index: 1;}
+.BannerSection .bannerIconSec ul{display: flex;flex-flow: wrap;text-align: center;}
+.BannerSection .bannerIconSec ul li{margin-right: 20px;text-align: center;font-size: 13px;}
+.BannerSection .bannerIconSec ul li img{width: 60px;margin: 0 auto;margin-bottom: 10px;}
+.BannerSection .vimeo-wrapper {position: fixed;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
+.BannerSection .vimeo-wrapper iframe {width: 100vw;height: 56.25vw;min-height: 100vh;min-width: 177.77vh;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.BannerSection .vimeo-wrapper video {width: 100%;height: auto;}
+.BannerSection .vimeo-wrapper .videoOverlay{position: absolute;width: 100%;height: 100%;background: rgba(0, 1, 50, 0.7);top: 0;left: 0; }
+.BannerSection .videoPopup{position: absolute;top: 0;left: 0;width: 100%;height: 100%;cursor: none;}
+.BannerSection .videoPopup a{width: 100%;height: 100%;display: block;cursor: none;}
+.bannercursor {position: absolute;width: 140px;height: 140px;top:-140px;left: -280px;cursor: none;pointer-events: none;}
+.BannerSection .downArrow{position: absolute;bottom: 0px;left: 0;right: 0;width: 50px;height: 50px;margin: auto;z-index:2;}
+.BannerSection .downArrow a{width: 100%;height: 100%;margin: auto;display: block;}
+.BannerSection .downArrow img{margin: auto;}
+.BannerSection .floating {animation-name: floating;animation-duration: 2s;animation-iteration-count: infinite;animation-timing-function: ease-in-out;}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+.BannerSection .deskVideo{display: block;}
+.BannerSection .mobVideo{display: none;}
+
+
+.productSection .secHeadinng{width: 40%;margin: 0 auto;text-align: center;}
+.productSection .secHeadinng h2{margin: 40px 0px 20px;}
+.productSection .productContent{width:70%;margin: 0 auto;display: flex;flex-flow: wrap;justify-content: space-between;margin-top: 30px;}
+.productSection .productContent .productInfo{width: 25%;text-align: center;}
+.productSection .productContent .productInfo:hover img{transform: scale(1.15) rotate(15deg);}
+/*.productSection .productContent .productInfo:hover a{    background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);color: #fff;transition: 0.5s all ease-in-out;box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);}*/
+.productSection .productContent .productInfo img{margin: 0 auto;transition: 0.5s all ease-in-out;}
+.productSection .productContent .productDetail{margin-top: 25px;}
+.productSection .productContent .productDetail h3{margin-bottom: 6px;}
+.productSection .productContent .productDetail p{margin-bottom: 15px;}
+
+.howtobuySection .secHeadinng{text-align: center;margin-bottom: 50px;}
+.howtobuySection .howtobuyContent{width:100%;margin: 0 auto;display: flex;flex-flow: wrap;justify-content: space-between;align-items: center;position: relative;height: 250px;z-index: 1;}
+/*.howtobuySection .howtobuyContentMob .howtobuyInfoMob{display: none;}
+.howtobuySection .howtobuyContent .howtobuyInfo{width: 250px;height:250px;position:relative;text-align: center;border-radius: 50%;border:1px solid #fff;display: flex;align-items: center;justify-content: center;flex-flow: column;transition: 0.5s all ease-in-out;transform-origin: center;}
+.howtobuySection .howtobuyContent .howtobuyInfo img{display: block;margin: 0 auto 10px;}
+.howtobuySection .howtobuyContent .howtobuyInfo .howtobuyDetail{position: absolute;width: 100%;height: 100%;opacity: 0;visibility: hidden;background: #170A3E;box-shadow: 1px 0px 143px rgba(193, 8, 251, 0.46);border-radius: 50%;overflow: hidden;padding: 50px;display: flex;align-items: center;transition: .5s all ease-in-out;}
+.howtobuySection .howtobuyContent .howtobuyInfo:hover{width: 300px;height: 300px;}
+.howtobuySection .howtobuyContent .howtobuyInfo:hover .howtobuyDetail{opacity: 1;visibility: visible;transition-delay: .5s;}*/
+
+
+.howtobuySection .howtobuyContent .howtobuyInfo{width: 33%;position: relative;}
+.howtobuySection .howtobuyContent .howtobuyInfo .howtobuyInfoBox{width: 200px;height: 200px;position:absolute;text-align: center;border-radius: 50%;border:1px solid #fff;display: flex;align-items: center;justify-content: center;flex-flow: column;transition: 0.5s all ease-in-out;transform-origin: center;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
+.howtobuySection .howtobuyContent .howtobuyInfo a{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.howtobuySection .howtobuyContent .howtobuyInfo img{display: block;margin: 0 auto 10px;}
+.howtobuySection .howtobuyContent .howtobuyInfo .howtobuyDetail{position: absolute;width: 100%;height: 100%;opacity: 0;visibility: hidden;background: #170A3E;box-shadow: 1px 0px 143px rgba(193, 8, 251, 0.46);border-radius: 50%;overflow: hidden;padding: 50px;display: flex;align-items: center;transition: .5s all ease-in-out;}
+.howtobuySection .howtobuyContent .howtobuyInfo:hover .howtobuyInfoBox{width: 300px;height: 300px;}
+.howtobuySection .howtobuyContent .howtobuyInfo:hover .howtobuyDetail{opacity: 1;visibility: visible;transition-delay: .5s;}
+.howtobuySection .howtobuyContent .howtobuyInfo .howtobuyInfoBox .howtobuyLink{width: 50px;height: 50px;background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);box-shadow: 1px 0px 143px rgba(193, 8, 251, 0.46);border-radius: 50%;display: flex;align-items: center;justify-content: center;opacity: 0;visibility: hidden;position: absolute;bottom: -20px;left: 0;right: 0;margin: 0 auto;}
+.howtobuySection .howtobuyContent .howtobuyInfo:hover .howtobuyLink{opacity: 1;visibility: visible;transition-delay: .5s;}
+.howtobuySection .howtobuyContent .howtobuyInfo .howtobuyInfoBox .howtobuyLink img{margin: 0 auto;width: 18px;}
+.howtobuySection .mapBox{width: 60%;margin: 0 auto;position: absolute;bottom: -5%;left: 0;right: 0;}
+.howtobuySection .mapBox img{margin: 0 auto;}
+.howtobuySection .howtobuyContentMob .howtobuyInfoMob{display: none;position: relative;}
+.howtobuySection .howtobuyContentMob .howtobuyInfoMob .howtobuyLink{width: 40px;height: 40px;background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);box-shadow: 1px 0px 143px rgba(193, 8, 251, 0.46);border-radius: 50%;display: flex;align-items: center;justify-content: center;position: absolute;bottom: -20px;left: 0;right: 0;margin: 0 auto;}
+.howtobuySection .howtobuyContentMob .howtobuyInfoMob .howtobuyLink img{width: 15px;margin: 0;}
+
+.testimonialSection .secHeadinng{text-align: center;margin: 50px 0px 30px;}
+.testimonialSection .testimonialContent{width: 64%;margin: 0 auto;position: relative;}
+.testimonialSection .slick-slide{margin: 5px;}
+.testimonialSection .testimonialInfo .testimonialwithImg{display: flex;flex-flow: wrap;border: 1px solid #000;border-radius:10px;overflow: hidden;}
+.testimonialSection .testimonialInfo .testimonialwithImg .testimonialCustomer{position: absolute;bottom: 30px;left: 50px;}
+.testimonialSection .testimonialInfo .testimonialImg{width: 40%;}
+.testimonialSection .testimonialInfo .testimonialImgInfo{width: 60%;padding: 40px 50px;position: relative;}
+.testimonialSection .testimonialInfo .testimonialImgInfo img{width: 30px;}
+.testimonialSection .testimonialInfo .testimonialImgInfo h3{margin: 30px 0px;}
+.testimonialSection .testimonialInfo .testimonialImgInfo a, .testimonialSection .testimonialInfo .testimonialText a{color: #18191F;}
+.testimonialSection .testimonialInfo .testimonialText{border: 1px solid #000;border-radius:10px;overflow: hidden;}
+.testimonialSection .testimonialInfo .testimonialText .testimonialTextInfo{text-align: center;padding: 30px}
+.testimonialSection .testimonialInfo .testimonialText .testimonialTextInfo img{margin: 0 auto;width: 30px;}
+.testimonialSection .testimonialInfo .testimonialText .testimonialTextInfo h3{margin: 30px 0px;}
+.testimonialSection .testimonialInfo .testimonialVideo {position: relative;border-radius: 10px;overflow: hidden;height: 400px;}
+.testimonialSection .testimonialInfo .videoPlay{position: absolute;top: 0;bottom: 0;left: 0;right: 0;display: flex;align-items: center;justify-content: center;}
+.testimonialSection .testimonialInfo .testimonialVideo .testimonialVideoImg {position: relative;height: 100%;}
+.testimonialSection .testimonialInfo .testimonialVideo .testimonialVideoImg .videoOverlay{width: 100%;height: 100%;position: absolute;top: 0;background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.08%, rgba(0, 0, 0, 0.76) 100%);}
+.testimonialSection .testimonialInfo .testimonialVideoInfo {position: absolute;bottom: 0;padding: 25px;width: 100%;display: flex;align-items: center;}
+.testimonialSection .testimonialInfo .testimonialVideoInfo .videoDetails{display: flex;align-items: center;}
+.testimonialSection .testimonialInfo .testimonialVideoInfo .videoDetails .videoPerThumb{margin-right: 10px;width: 60px;height: 60px;border-radius: 50%;overflow: hidden;}
+
+.testimonialSection .sliderArrow {position: absolute;width: 100%;top: 50%;transform: translateY(-50%);left: 0;}
+.testimonialSection .testimonialSliderBack, .testimonialSection .testimonialSliderForward {background: transparent;position: absolute;cursor: pointer;}
+.testimonialSection .testimonialSliderBack:focus, .testimonialSection .testimonialSliderForward:focus {outline: none;}
+.testimonialSection .testimonialSliderBack{left: -50px;}
+.testimonialSection .testimonialSliderForward{right: -50px;}
+.testimonialSection .slick-track{align-items: center;}
+
+.mediablogSection .secHeadinng{width: 50%;margin: 50px auto 30px;text-align: center;}
+.mediablogSection .secHeadinng h2{margin-bottom: 15px;}
+.mediablogSection .secHeadinng p{width: 70%;margin: 0 auto;}
+.mediablogSection .mediablogSec{width: 80%;margin: 0 auto;position: relative;}
+.mediablogSection .mediablogSec .mediablogContent{padding: 40px;background: #170A3E;border: 0.5px solid #FFFFFF;border-radius: 10px;margin: 15px;}
+.mediablogSection .mediablogSec .mediablogContent:hover{box-shadow: 1px 0px 20px rgba(193, 8, 251, 0.5);}
+.mediablogSection .mediablogSec .mediablogContent h3{margin-top: 15px;}
+.mediablogSection .mediablogSec .mediablogContent p{margin: 15px 0px;}
+.mediablogSection .sliderArrow {position: absolute;width: 100%;top: 50%;transform: translateY(-50%);left: 0;}
+.mediablogSection .mediablogSliderBack, .mediablogSection .mediablogSliderForward {background: transparent;position: absolute;cursor: pointer;}
+.mediablogSection .mediablogSliderBack:focus, .mediablogSection .mediablogSliderForward:focus {outline: none;}
+.mediablogSection .mediablogSliderBack{left: -50px;}
+.mediablogSection .mediablogSliderForward{right: -50px;}
+.mediablogSection .mediaInfoLink{text-align: center;margin-top: 30px;}
+
+.certifiedSection .secHeadinng{width: 50%;margin: 0 auto;text-align: center;}
+.certifiedSection .secHeadinng h2{margin-bottom: 20px;}
+.certifiedSection .certifiedContent{width: 80%;margin: 0 auto;text-align: center;}
+.certifiedSection .certifiedContent .certifiedInfo{display: flex;flex-flow: row;justify-content: center;align-items: center;}
+.certifiedSection .certifiedContent .certifiedInfo .certifiedLogobox{margin: 50px 25px;}
+
+.candidInstaSection .secHeadinng{text-align: center;margin: 50px 0px;}
+.candidInstaSection .candidInstaContent{width: 80%;margin: 0 auto;position: relative;}
+.candidInstaSection .candidInstaContent .candidInstaInfo{border-radius: 10px;margin: 5px;position: relative;overflow: hidden;height: 220px !important;}
+.candidInstaSection .candidInstaContent .candidInstaInfo .mediaBox{width: 100%;height: 100%;}
+.candidInstaSection .candidInstaContent .candidInstaInfo .mediaBox img{width: 100%;height: 100%;object-fit: cover;}
+.candidInstaSection .candidInstaContent .candidInstaInfo video{width: 100%;height: auto;}
+.candidInstaSection .candidInstaContent .candidInstaInfo:hover .overlayContent{opacity: 1;top:0px;}
+.candidInstaSection .candidInstaContent .candidInstaInfo .overlayContent{position: absolute;width: 100%;height: 100%;top: 100%;background: rgba(0, 0, 0, 0.7);text-align: center;padding: 20px;display: flex;align-items: center;flex-flow: column;justify-content: center;opacity: 0;transition: 0.5s all ease-in-out;cursor:pointer}
+.candidInstaSection .candidInstaContent .candidInstaInfo .overlayContent a{width: 100%;height: 100%;display: block;}
+.candidInstaSection .candidInstaContent .candidInstaInfo .overlayContent img{margin: 0px auto;width: 25px;position: absolute;left: 0;right: 0;top: 50%;transform: translateY(-50%);}
+.candidInstaSection .candidInstaContent .candidInstaInfo .overlayContent h3{position: absolute;left: 0;right: 0;bottom: 15px;margin: auto;}
+.candidInstaSection .sliderArrow {position: absolute;width: 10%;bottom: -20px;left: 0;right: 0;margin: 0px auto;}
+.candidInstaSection .candidInstaSliderBack, .candidInstaSection .candidInstaSliderForward {background: transparent;position: absolute;}
+.candidInstaSection .candidInstaSliderBack:focus, .candidInstaSection .candidInstaSliderForward:focus {outline: none;}
+.candidInstaSection .candidInstaSliderBack{left: 0px;}
+.candidInstaSection .candidInstaSliderForward{right: 0px;}
+
+.gallerySection .secHeadinng{text-align: center;margin: 50px 0px;}
+.gallerySection .slidercontainer {width: 50%; margin: 0 auto; max-width: 80%;position: relative;}
+.gallerySection .slick-slider {margin-left: -12%; margin-right: -12%; }
+.gallerySection .slick-list {padding-left: 15%!important; padding-right: 15%!important; }
+.gallerySection .slick-dots {text-align: right; position: absolute; bottom: 0; left: 0; right: 0; }
+.gallerySection .slick-track {max-width: 100%!important; transform: translate3d(0, 0, 0)!important; perspective: 100px; }
+.gallerySection .slick-slide {position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; opacity: 0; width: 100%!important; transform: translate3d(0, 0, 0); transition: transform 1s, opacity 1s; }
+.gallerySection .slick-snext, .slick-sprev, .slick-snext2, .slick-sprev2{display: block; }
+.gallerySection .slick-current {opacity: 1; position: relative; display: block; z-index: 2; }
+.gallerySection .slick-snext {opacity: 0.5; transform: translate3d(10%, 0, -10px); z-index: 1; perspective: 1000px;}
+.gallerySection .slick-snext:before{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #C903FE;border-radius: 20px;z-index: 1}
+.gallerySection .slick-snext2 {opacity: 0.5; transform: translate3d(20%, 0, -20px); z-index: 0; perspective: 1000px;}
+.gallerySection .slick-snext2:before{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #C903FE;border-radius: 20px;z-index: 1}
+.gallerySection .slick-sprev {opacity: 0.5; transform: translate3d(-10%, 0, -10px); }
+.gallerySection .slick-sprev:before{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #29FAE4;border-radius: 20px;z-index: 1}
+.gallerySection .slick-sprev2 {opacity: 0.5; transform: translate3d(-20%, 0, -20px); }
+.gallerySection .slick-sprev2:before{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #29FAE4;border-radius: 20px;z-index: 1}
+.gallerySection .test {display: block; width: 100%;position: relative;}
+.gallerySection .test img{border-radius: 20px;opacity: 0;transition: .5s all ease-in-out;}
+.gallerySection .slick-current .test img{opacity: 1;}
+.gallerySection .sliderArrow {position: absolute;width: 100%;top: 50%;transform: translateY(-50%);left: 0;}
+.gallerySection .sliderArrow img{width: 12px;}
+.gallerySection .gallerySliderBack, .gallerySection .gallerySliderForward {background: transparent;position: absolute;}
+.gallerySection .gallerySliderBack:focus, .gallerySection .gallerySliderForward:focus {outline: none;}
+.gallerySection .gallerySliderBack{left: -50px;}
+.gallerySection .gallerySliderForward{right: -50px;}
+.gallerySection .galleryInfoLink{text-align: center;margin-top: 50px;}
+.sliderArrow img{width: 12px;}
+
+/*********************************************Footer CSS************************************************/
+footer{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);}
+footer .footerTop{border-top: 1px solid rgba(0, 0, 0, 0.4);border-bottom: 1px solid rgba(0, 0, 0, 0.4);padding: 50px 0px;}
+footer .footerTop .wrapper{display: flex;flex-flow: wrap;}
+footer .footerTop .wrapper .footerBox{width: 20%;}
+footer .footerTop .wrapper .footerBox .socialMedia{display: flex;flex-flow: row;}
+footer .footerTop .wrapper .footerBox .socialMedia li{margin: 10px 0px;margin-right: 25px;}
+footer .footerTop .wrapper .footerBox .mainPagelinks li a{margin-bottom: 15px;color: #000;display: block;font-weight:500;}
+footer .footerTop .wrapper .footerBox .tradepageLinks li a{margin-top: 15px;color: #000;display: block;}
+footer .footerTop .wrapper .footerBox .productspageLinks li a{margin-top: 15px;color: #000;display: block;}
+footer .footerTop .wrapper .footerBox .companycontactInfo li a{color: #000;display: block;}
+footer .footerTop .wrapper .footerBox .companycontactInfo li{margin-bottom: 15px;color: #000;padding-left: 35px;display: flex;align-items: center;min-height: 25px;}
+footer .footerBottom {padding: 20px;}
+footer .footerBottom .bottomLinks {text-align: center;width: 100%;}
+footer .footerBottom .bottomLinks {display: flex;flex-flow: row;justify-content: center;}
+footer .footerBottom .bottomLinks li a{color: #000;display: block;margin: 0px 10px;}
+.chatIcon{position: fixed;bottom: 80px;right: 80px;z-index: 1;}
+/*.chatIcon svg .chatColor{fill: #fff;}*/
+
+/*********************************************About Us CSS************************************************/
+.aboutusBanner{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 250px 0px 200px;text-align: center;}
+.aboutusBanner .aboutusBannerContent{width: 53%; margin: 0 auto;}
+.aboutusBanner .aboutusBannerContent p{line-height: 1.5;}
+.aboutusBanner .aboutusBannerContent .secHeading{margin-bottom: 30px;}
+.decorationSectionOne .decorationSectionContent{display: flex;flex-flow: wrap;align-items: center;background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);}
+.decorationSectionOne .decorationOneImg{width: 50%;}
+.decorationSectionOne .decorationOneContent{width: 50%;padding: 0px 150px;}
+.decorationSectionOne .decorationOneContent p{line-height: 1.5;}
+.decorationSectionOne .decorationOneContent h2{margin-bottom: 30px;}
+.aboutusHighlightSection{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 150px 0px;text-align: center;}
+.aboutusHighlightSection .aboutusHighlightContent{width: 75%; margin: 0 auto;}
+.makeDifferenceSec{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 120px 0px;}
+.makeDifferenceSec .makeDifferenceContent{width: 70%;margin: 0 auto;}
+.makeDifferenceSec .secHeading{text-align: center;margin-bottom: 50px;}
+.makeDifferenceSec .makeDifferenceDetails{display: flex;flex-flow: wrap;align-items: flex-start;}
+.makeDifferenceSec .makeDifferenceIcons{width: 50%;}
+.makeDifferenceSec .makeDifferenceIcons ul{display: flex;flex-flow: wrap;align-items: flex-start;}
+.makeDifferenceSec .makeDifferenceIcons ul li{width: 25%;text-align: center;}
+.makeDifferenceSec .makeDifferenceIcons ul li img{margin: 0 auto 10px;}
+.makeDifferenceSec .makeDifferenceInfo{width: 50%;padding-left: 100px;}
+
+
+/*********************************************FAQs CSS************************************************/
+.faqsSection{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 150px 0px;}
+.faqsSection .faqsContent{width: 60%; margin: 0 auto;}
+.faqsSection .faqsContent .secHeading{margin-bottom: 40px;text-align: center;}
+.faqsSection .faqsContent .faqsData .faqsQA{padding: 45px 0px;border-bottom: 1px solid #000;display: none;}
+.faqsSection .faqsContent .faqsData .active .accordion_body{display: block !important;}
+.faqsSection .faqsContent .accordion_body p{font-size:18px;}
+.faqsSection .faqsContent .faqsData .faqsQA .accordion_head{position: relative;padding-right: 25px;}
+.faqsSection .faqsContent .faqsData .faqsQA .accordion_head .plusminus{position: absolute;top: -5px;right: 0;line-height: 1;}
+.faqsSection .faqsContent .faqsData .faqsQA .accordion_body{padding-top: 25px;}
+.faqsSection .faqsContent .faqsData .loadCTAText{text-align: center;margin-top: 50px;}
+.faqsSection .faqsContent .faqsData .noContent {background-color: transparent !important;pointer-events: none;}
+
+
+/*********************************************Certifications CSS************************************************/
+.certificateSection{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 150px 0px;}
+.certificateSection .secHeading{margin-bottom: 40px;text-align: center;}
+.certificateSection .certificateContent{width: 65%; margin: 0 auto;}
+.certificateSection .certificateContent .certificateData{display: flex;flex-flow: wrap;align-items: flex-start;border-bottom: 1px solid rgba(0,0,0,0.3);padding: 50px 0px;}
+.certificateSection .certificateContent .certificateData .certificateLogo{width: 25%;}
+.certificateSection .certificateContent .certificateData .certificateInfo{width: 75%;padding-left: 50px;}
+.certificateSection .certificateContent .certificateData .certificateInfo h3{margin-bottom: 15px;}
+.certificateSection .certificateContent .certificateData .certificateInfo a:hover{text-decoration: underline;}
+
+
+/*********************************************Gallery CSS************************************************/
+.gallerySectionPage{background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);padding: 150px 0px;}
+.gallerySectionPage .secHeading{margin-bottom: 40px;text-align: center;}
+.gallerySectionPage .galleryContent{width: 70%; margin: 0 auto;min-height:100vh;}
+.galleryContent .button {padding: 12px 50px; cursor: pointer; border-bottom: 1px solid rgba(0,0,0,0.3);background: transparent;position: relative;}
+.galleryContent .button:before {content: '';width: 100%;height: 2px;background: #000;position: absolute;bottom: 0;left: 0;opacity: 0;transition: 0.5s all ease-in-out;}
+.galleryContent .button:hover:before {opacity: 1;}
+.galleryContent .button:active, .galleryContent .button.is-checked {outline: none;font-weight: 600;}
+.galleryContent .button:active:before, .galleryContent .button.is-checked:before {opacity: 1;}
+.galleryContent .button-group {margin: 20px 0; display: flex;flex-flow: wrap;justify-content: center;}
+.galleryContent img {vertical-align: middle; }
+.galleryContent .img-responsive {display: block;max-width: 100%;height: auto;}
+.galleryContent .grid article {display: block;float: left;margin: 1%;width: 23%;border-radius: 10px;overflow: hidden;}
+@media (max-width: 1024px) {
+	.galleryContent .grid article {width: 31.3%;}
+}
+@media (max-width: 767px) {
+	.galleryContent .grid article {width: 48%;}
+}
+@media (max-width: 479px) {
+	.galleryContent .grid article {margin: 2% 0;width: 100%;}
+}
+
+/*********************************************Where To Buy CSS************************************************/
+.wheretobuySection{background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);padding: 150px 0px 0px;}
+.wheretobuySection .secHeading{margin-bottom: 50px;}
+.wheretobuySection .wheretobuyData select{border: 1px solid #FFFFFF;border-radius:5px;background: transparent;color: #fff;padding: 10px;}
+.wheretobuySection .wheretobuyData .countryData{width: 450px;margin: 40px auto;}
+.wheretobuySection .wheretobuyData .countryData .size_chart{width:100%;height: 300px;overflow-y: scroll;padding: 0px 10px;}
+.wheretobuySection .wheretobuyData .countryData .size_chart .countryStoreData{min-height: 300px;}
+.wheretobuySection .wheretobuyData .countryData .size_chart::-webkit-scrollbar-track{border-radius: 10px;background-color: transparent;}
+.wheretobuySection .wheretobuyData .countryData .size_chart::-webkit-scrollbar{width: 8px;background-color: transparent;}
+.wheretobuySection .wheretobuyData .countryData .size_chart::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: rgba(255,255,255,0.4);}
+.wheretobuySection .wheretobuyData .countryData ul{width: 100%;text-align: left}
+.wheretobuySection .wheretobuyData .countryData ul li{display: flex;flex-flow: wrap;align-items: center;margin-bottom: 40px;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeName{width: 60%;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeName p{color: #726B8B;margin-top: 3px;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeLink{width: 40%;text-align: right;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeLink .visitCTA{color: #fff;border: 1px solid #fff;border-radius: 5px;padding: 10px 15px;text-transform: uppercase;display: inline-block;font-size: 14px;line-height: 1;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeLink .visitCTA:hover{background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);border-color: transparent;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeLink .contactCTA{color: #fff;border: 1px solid #fff;border-radius: 5px;padding: 10px 15px;text-transform: uppercase;display: inline-block;font-size: 14px;line-height: 1;}
+.wheretobuySection .wheretobuyData .countryData ul li .storeLink .contactCTA:hover{background: #1CBED7;box-shadow: 1px 0px 20px rgb(255 255 255 / 50%);border-color: transparent;}
+.wheretobuySection .wheretobuyData .countryData .notifyForm{margin-top: 50px;text-align: left;}
+.wheretobuySection .wheretobuyData .countryData .notifyForm p{margin-bottom: 10px;}
+.wheretobuySection .wheretobuyData .countryData form .formFields{display: flex;flex-flow: wrap;align-items: center;border: 1px solid #fff;border-radius: 2px;margin-top: }
+.wheretobuySection .wheretobuyData .countryData form .formFields .forminputField{width: 70%;text-align: left;}
+.wheretobuySection .wheretobuyData .countryData form .formFields .forminputField input{width:100%;background: transparent;padding: 10px;}
+.wheretobuySection .wheretobuyData .countryData form .formFields .formsubmitField{width: 30%;}
+.wheretobuySection .wheretobuyData .countryData form .formFields .formsubmitField input{width: 100%;background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);color: #fff;padding: 15px;font-size: 14px;font-weight: 400;height: 100%;}
+.wheretobuySection .wheretobuyData img{margin: 0 auto 20px;}
+.wheretobuySection .wheretobuyMapSec img{margin: 0 auto;}
+.box {width: 40%; margin: 0 auto; background: rgba(255,255,255,0.2); padding: 35px; border: 2px solid #fff; border-radius: 20px/50px; background-clip: padding-box; text-align: center; }
+.overlay {position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0;display: flex;align-items: center;justify-content: center;} 
+.overlay:target {visibility: visible; opacity: 1; } 
+.popup {margin: 70px auto;background: linear-gradient(287.56deg, #33154D 0%, #000132 100%); border: 1px solid #FFFFFF; box-sizing: border-box; box-shadow: 1px 0px 59px rgba(193, 8, 251, 0.6); color: #fff; border-radius: 13px; width: 50%; position: relative;}
+.popup_box{padding: 30px;}
+.popup h2, h4 {margin: 0;}
+.popup .close {position: absolute; top: 20px; right: 30px;font-size: 40px; font-weight: bold; text-decoration: none; color: #fff; }
+.popup .content {max-height: 30%;overflow: auto;}
+.popup_footer{display: flex;flex-wrap: nowrap;}
+.popup_footer_icon{width: 33.33%; text-align: center; border-top: 1px solid; border-right: 1px solid; padding: 15px 0px;}
+.popup_footer_icon a{display: block;width: 100%;}
+.popup_footer_icon a img{margin: 0 auto;}
+.popup_footer_icon:nth-child(3) {border-right: 0px solid; }
+
+
+/*********************************************Trade Customer CSS************************************************/
+.tradecustomerSection{background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);padding: 150px 0px;}
+.tradecustomerSection .secHeading{text-align: center;margin-bottom: 80px;}
+.tradecustomerBox{width:90%;margin:0 auto;display: flex; justify-content: space-between; /*align-items: flex-start;*/flex-flow: wrap;}
+.tradecustomerBox .box-content {width: 48%;border: 1px solid #FFF;border-radius: 10px;padding: 50px;}
+.tradecustomerBox .box-content p{margin: 20px 0px;}
+.tradecustomerBox .box-content a {text-transform: uppercase; letter-spacing: 0.15em; background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%);border-radius: 5px;padding: 12px 35px;display: inline-block;border: 1px solid #912CEA;transition: 0.3s all ease-in-out;}
+.tradecustomerBox .box-content a:hover {border: 1px solid #912CEA;color: #fff;box-shadow: 1px 0px 20px rgb(193 8 251 / 50%);}
+
+/*********************************************Trade Customer InnerPage CSS************************************************/
+.tradecustomformSection{padding: 150px 0px;background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);}
+.tradecustomformSection .formBox{width: 75%;margin:0px auto;}
+.tradecustomformSection .formBox .backcta{margin-bottom: 40px;}
+.tradecustomformSection .formBox .backcta a{position: relative;}
+.tradecustomformSection .formBox .backcta a:hover{color: #fff;}
+.tradecustomformSection .formBox .backcta a:before {content: '';position: absolute;bottom: -3px;left: 0px;background: #fff;width: 0%;height: 2px;transition: .5s all ease-in-out;}
+.tradecustomformSection .formBox .backcta a:hover:before {width: 100%;}
+.tradecustomformSection .formBox .tradecustomerInfo {margin-bottom: 40px;}
+.tradecustomformSection .formBox .tradecustomerInfo h2 {margin-bottom: 10px;}
+.tradecustomformSection .formBox .formRow{display: flex;flex-flow: wrap;align-items: flex-start;justify-content: space-between;margin-bottom: 30px;}
+.tradecustomformSection .formBox .formRow .inputElement{width: 48%;}
+.tradecustomformSection .formBox .formRow .inputElementFull{width: 70%;}
+.tradecustomformSection .formBox .formRow .inputElement label, .tradecustomformSection .formBox .formRow .inputElementFull p{margin-bottom: 5px;}
+.tradecustomformSection .formBox .formRow .inputElement input{color: #ffffff;background-color: transparent;border-radius: 5px; border: 1px solid #EAEAEA;width: 100%;padding: 15px 10px;}
+.tradecustomformSection .formBox .formRow .inputElementFull textarea{border-radius: 5px;border: 1px solid #EAEAEA;width: 100%;padding: 15px 10px;min-height: 120px; background: transparent;}
+.tradecustomformSection .formBox p span{opacity: 0.3;color: #fff;}
+.tradecustomformSection .formBox .checkboxRow{display: flex;align-items: center; padding: 20px 0px;}
+.tradecustomformSection .formBox .checkboxHold {display: block; position: relative; padding-left: 35px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;margin-right: 20px;}
+/* Hide the browser's default checkbox */
+.tradecustomformSection .formBox .checkboxHold input {position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+/* Create a custom checkbox */
+.tradecustomformSection .formBox .checkmark {position: absolute; top: -3px; left: 0; height: 25px; width: 25px; background-color: transparent; border: 1px solid #ffffff;}
+/* On mouse-over, add a grey background color */
+.tradecustomformSection .formBox .checkboxHold:hover input~.checkmark {background-color: transparent; }
+/* When the checkbox is checked, add a blue background */
+.tradecustomformSection .formBox .checkboxHold input:checked~.checkmark {background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%); border: 1px solid #FFFFFF; box-sizing: border-box; border-radius: 2px; }
+/* Create the checkmark/indicator (hidden when not checked) */
+.tradecustomformSection .formBox .checkmark:after {content: ""; position: absolute; display: none; }
+/* Show the checkmark when checked */
+.tradecustomformSection .formBox .checkboxHold input:checked~.checkmark:after {display: block; }
+/* Style the checkmark/indicator */
+.tradecustomformSection .formBox .checkboxHold .checkmark:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+/*********************************************Our Products CSS************************************************/
+.ourproductsSection{background: linear-gradient(287.56deg, #33154D 0%, #000132 100%);padding: 150px 0px 100px;}
+.ourproductsSection [data-tab-content] {display: none;}
+.ourproductsSection .active[data-tab-content] {display: block;}
+.ourproductsSection .tabs {display: flex;/*justify-content: space-around;*/list-style-type: none;margin: 0;padding: 0;border-bottom: 1px solid rgb(255 255 255 / 80%);}
+.ourproductsSection .tab {cursor: pointer; padding: 20px 40px;letter-spacing: 0.15em;transition: 0.5s all ease-in-out;}
+.ourproductsSection .tab.active {border-bottom: 2px solid #fff;font-weight: 500;}
+.ourproductsSection .tab-content {padding: 50px;}
+.productsContent{display: flex;flex-flow: wrap;}
+.productsContent .productsGallery{width: 50%;position: relative;}
+.productsContent .productsGallery .gallerySlider img{border-radius: 10px;}
+.productsContent .productsGallery .gallerySliderthumb{width: 80%;margin: 20px auto 0px;}
+.productsContent .productsGallery .gallerySliderthumb div{margin: 5px;}
+.productsContent .productsGallery .gallerySliderthumb img{border-radius: 5px;margin: 0px 5px;}
+.productsContent .productsInfo{width: 50%;padding: 0px 50px;display: flex;justify-content: space-between;flex-direction: column;}
+.productsContent .productsInfo h2{margin-bottom: 25px;}
+.productsContent .productsInfo p{opacity: 0.8;line-height: 1.5;margin-bottom: 25px;}
+.productsContent .productsInfo ul{display: flex;flex-flow: wrap;align-items: center;margin-bottom: 40px;}
+.productsContent .productsInfo ul li.colorCircle{width: 30px;height: 30px;border-radius: 50%;margin-right: 30px;margin-bottom: 10px;}
+.productsContent .productsInfo .productsFeatures{display: flex;flex-flow: wrap;margin-bottom: 25px;}
+.productsContent .productsInfo .productsFeatures .productsFeaturesInfo{margin-right: 20px;text-align: center;}
+.productsContent .productsInfo .productsFeatures .productsFeaturesInfo img{margin: 10px auto;}
+.productsContent .productsInfo .productsFeatures .productsFeaturesInfo p{opacity: 1;line-height: 1;}
+.cta{text-decoration: none; letter-spacing: 0.15em; text-align: center; background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%); border-radius: 5px; justify-content: center; align-items: center; padding: 10px 25px;}
+.cta:hover{box-shadow: 1px 0px 20px rgb(193 8 251 / 100%);color: #fff;}
+.dummyImg{position: relative;opacity: 0;}
+.dummyImg1{position: absolute;top: 0;left: 0;width: 100%;}
+.slide-fade-enter-active {transition: all .3s ease;}
+.slide-fade-leave-active {transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);}
+.slide-fade-enter, .slide-fade-leave-to{opacity: 0;}
+
+/*********************************************Terms Conditions CSS************************************************/
+.faqsSection .faqsContent .faqsData .termsCondition, .faqsSection .faqsContent .faqsData .privacyPolicy{border-bottom: 0px solid;padding: 10px 0px;}
+.termsCondition h2, .privacyPolicy h2{font-size:40px;}
+.termsCondition h3, .privacyPolicy h3{font-size:28px;}
+.termsCondition h4, .privacyPolicy h4{font-size:24px;}
+.termsCondition p, .privacyPolicy p{margin: 15px 0px; font-size:18px;}
+table, th, td {border: 1px solid black;border-collapse: collapse;padding: 10px;}
+.privacyPolicy a{color:#18191F;font-size:18px;}
+
+/*********************************************Media Queries************************************************/
+@media all and (max-width: 1600px) {
+	.wrapper{padding: 0 80px;position: relative;}
+	.font95{font-size: 60px;}
+	.font60{font-size: 40px;}
+	.font40{font-size: 32px;}
+	.font28{font-size: 22px;}
+	.font24{font-size: 20px;}
+	.font20{font-size: 18px;}
+	.font18{font-size: 16px;}
+	.font16{font-size: 14px;}
+	.ctaTwo{padding: 8px 20px;}
+	.ctaOne{padding: 8px 20px;}
+	#header{padding: 15px 0px;}
+	#menu .toplogo {padding: 15px 0px 0px;}
+	.nav-footer{padding: 30px 0px;}
+	.main-nav .baseMenu ul li {margin-bottom: 25px;}
+	#header .menuHolder a{margin-right: 40px;}
+	.main-nav .productMenu h3{margin-bottom: 25px;}
+	.main-nav .productMenu .productsubMenu{margin-bottom: 50px;}
+	.contactUsCta{margin-right: 40px;}
+	.fixedMenu .tablinks .menuText{font-size: 28px;}
+    .fixedMenu .tablinks a{font-size: 28px;}
+    .fixedMenu .tablinks.active .menuText{font-size: 36px;}
+    .fixedMenu .tablinks.active a{font-size: 36px;}
+    .fixedSubMenu .tabcontent ul li .menuItem{font-size: 20px;}
+    .innerMenu h4{font-size: 36px;}
+    .innerMenu a{font-size: 28px;}
+    .innerMenu p{font-size: 20px;}
+    .mediablogSection .secHeadinng{margin: 60px auto 15px;}
+    .mediablogSection .mediaInfoLink {margin-top: 10px;}
+    .mediablogSection .secHeadinng h2{margin-bottom: 8px;}
+    .mediablogSection .mediablogSec .mediablogContent{padding: 20px;}
+    .mediablogSection .mediablogSec .mediablogContent h3 {margin-top: 10px;}
+    .mediablogSection .mediablogSec .mediablogContent p {margin: 10px 0px;}
+    .chatIcon{bottom: 50px;right: 50px;}
+    .bannercursor {position: absolute;width: 100px;height: 100px;left: -100px;}
+    .testimonialSection .testimonialInfo .testimonialImgInfo {padding: 20px 30px;}
+    .testimonialSection .testimonialInfo .testimonialImgInfo h3 {margin: 20px 0px;}
+    .testimonialSection .testimonialInfo .testimonialwithImg .testimonialCustomer{left: 30px;bottom: 20px;}
+    footer .footerTop .wrapper .footerBox .socialMedia li{margin: 10px 0px;margin-right: 15px;}
+
+    /*********************************************About Us CSS************************************************/
+	.aboutusBanner{padding: 150px 0px 100px;}
+	.aboutusBanner .aboutusBannerContent .secHeading{margin-bottom: 18px;}
+	.decorationSectionOne .decorationOneContent{padding: 0px 120px;}
+	.decorationSectionOne .decorationOneContent h2{margin-bottom: 18px;}
+	.aboutusHighlightSection{padding: 100px 0px;}
+	.makeDifferenceSec{padding: 100px 0px;}
+	.makeDifferenceSec .makeDifferenceContent{width: 80%;}
+	.makeDifferenceSec .secHeading{margin-bottom: 40px;}
+	.makeDifferenceSec .makeDifferenceInfo{width: 50%;padding-left: 80px;}
+
+	/*********************************************FAQs CSS************************************************/
+	.faqsSection{padding: 150px 0px 100px;}
+	/*.faqsSection .faqsContent{width: 60%;}*/
+	.faqsSection .faqsContent .secHeading{margin-bottom: 30px;}
+	.faqsSection .faqsContent .faqsData .faqsQA{padding: 25px 0px;}
+	.faqsSection .faqsContent .faqsData .faqsQA .accordion_body{padding-top: 20px;}
+	.faqsSection .faqsContent .accordion_body p{font-size:16px;}
+	.faqsSection .faqsContent .faqsData .loadCTAText{margin-top: 30px;}
+
+	/*********************************************Certifications CSS************************************************/
+	.certificateSection{padding: 150px 0px 100px;}
+	.certificateSection .secHeading{margin-bottom: 30px;}
+	.certificateSection .certificateContent .certificateData{padding: 30px 0px;}
+
+	/*********************************************Gallery CSS************************************************/
+	.gallerySectionPage{padding: 150px 0px 100;}
+	.gallerySectionPage .secHeading{margin-bottom: 30px;}
+
+	/*********************************************Trade Customer CSS************************************************/
+	.tradecustomerSection{padding: 150px 0px 100px;}
+	.tradecustomerSection .secHeading{margin-bottom: 50px;}
+	.tradecustomerBox .box-content {padding: 40px;}
+	.tradecustomerBox .box-content a {padding: 8px 20px;}
+
+	/*********************************************Trade Customer InnerPage CSS************************************************/
+	.tradecustomformSection{padding: 150px 0px 100px;}
+	.tradecustomformSection .formBox .backcta{margin-bottom: 30px;}
+	.tradecustomformSection .formBox .tradecustomerInfo {margin-bottom: 30px;}
+	.tradecustomformSection .formBox .formRow{margin-bottom: 25px;}
+	.tradecustomformSection .formBox .formRow .inputElement input{padding: 10px 10px;}
+	.tradecustomformSection .formBox .formRow .inputElementFull textarea{padding: 10px 10px;min-height: 120px;}
+
+	/*********************************************Our Products CSS************************************************/
+	.ourproductsSection{padding: 150px 0px 80px;}
+	.ourproductsSection .tab {padding: 15px 30px;}
+	.ourproductsSection .tab-content {padding: 40px;}
+	.productsContent .productsInfo{padding: 0px 40px;}
+	.productsContent .productsInfo h2{margin-bottom: 20px;}
+	.productsContent .productsInfo p{margin-bottom: 20px;}
+	.productsContent .productsInfo ul{margin-bottom: 20px;}
+	.productsContent .productsInfo ul li.colorCircle{width: 25px;height: 25px;margin-right: 20px;}
+	#loadMore, #loadLess{width: 25px;height: 25px;line-height: 25px;}
+	.productsContent .productsInfo .productsFeatures{margin-bottom: 20px;}
+
+	/*********************************************Terms Conditions CSS************************************************/
+	.termsCondition h2, .privacyPolicy h2{font-size:32px;}
+	.termsCondition h3, .privacyPolicy h3{font-size:22px;}
+	.termsCondition h4, .privacyPolicy h4{font-size:20px;}
+	.termsCondition p, .privacyPolicy p{font-size:16px;}
+}
+@media all and (max-width: 1400px) {
+	.font60 {font-size: 34px;}
+	.main-nav{padding-top: 30px;}
+	.main-nav .baseMenu ul li {margin-bottom: 20px;}
+	.main-nav .productMenu h3 {margin-bottom: 20px;}
+}
+@media all and (max-width: 1280px) {}
+@media all and (max-width: 1200px) {}
+@media all and (max-width: 1080px) {}
+@media all and (max-width: 900px) {
+	.wrapper{padding: 0 50px;position: relative;}
+	#header {padding: 10px 0px;}
+	#header.innerHeader.active:before{height: 75px;}
+	/*#header.active {background: linear-gradient(65.58deg, #E5FFFC 17.14%, #F6E8FE 101.47%);}*/
+	#header .logo img, #header .custom-logo-link img {width: 80px !important;}
+	#menu .toplogo {padding: 10px 0px 0px;}
+	.desktopMenuFull{display: none;}
+	.logoMenuHolder,.menuHolder{width: auto;}
+	/*.main-nav{display: block;}*/
+	/*.nav-footer{display: none;}*/
+	.main-nav {padding-top: 10px;}
+	.main-nav .baseMenu, .main-nav .productMenu{width: 100%;}
+	.main-nav .baseMenu ul li, .main-nav .productMenu h3 {margin-bottom: 10px;}
+	.main-nav .productMenu .productsubMenu {margin-bottom: 20px;}
+	.nav-footer{padding-bottom: 0px;}
+	.nav-footer .headersocialSites ul{margin-bottom: 15px;}
+	.nav-footer .headersocialSites ul li img{width: 35px;}
+	.nav-footer .headerContactdetails ul li{margin-bottom: 15px;margin-right: 0px;}
+
+    .mobileMenu{display: block;padding-top: 120px;position: relative;overflow-y: scroll;height: 100%;background-image: url('../images/right-menu-img.png');background-repeat: no-repeat;background-position: bottom;background-size: 80%;}
+    .togglerIcon .toggle:before {content: "\f107";font: normal normal normal 16px/1 FontAwesome;color: #fff;opacity: 0.3;font-size: 24px;}
+    .togglerIcon.active .toggle:before {content:"\f106" !important; font:normal normal normal 16px/1 FontAwesome;}
+    .mobileInnerMenu{border-bottom: 0.5px solid rgba(255,255,255,0.3);}
+    .mobileInnerMenu:last-child{border-bottom: 0;}
+    .mobileInnerMenu .mobileMenuText{font-size: 24px;font-family: 'caslongraphiqueefregular';font-weight: 500;display: flex;align-items: center;justify-content: space-between;padding: 20px 0;color: #fff;}
+    /* .mobileInnerMenu ul{height: 0;opacity: 0;visibility: hidden;transition: all .5s;}
+    .mobileInnerMenu ul.active{height: auto;opacity: 1;visibility: visible;} */
+    .mobileInnerMenu .mobileInnerSubMenu{display: none;}
+    .mobileInnerMenu ul li{display: flex;align-items: center;padding-bottom: 25px;}
+    .mobileInnerMenu ul li img{width: 20px;margin-right: 10px;}
+    .mobileInnerMenu ul li a{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);}
+    .mobileInnerMenu .innerMobileMenuText{text-align: left;transition: all .5s;padding-bottom: 25px;}
+    /* .mobileInnerMenu .innerMobileMenuText{text-align: left;height: 0;opacity: 0;visibility: hidden;transition: all .5s;padding-bottom: 25px;} */
+    /* .mobileInnerMenu .innerMobileMenuText.active{height: auto;opacity: 1;visibility: visible;} */
+    .mobileInnerMenu .innerMobileMenuText p{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);margin-bottom: 15px;}
+    .mobileInnerMenu .innerMobileMenuText h4{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);margin-bottom: 10px;}
+    .mobileInnerMenu .innerMobileMenuText a{font-size: 16px;text-transform: capitalize;color:rgba(255, 255, 255, 0.8);text-decoration: underline;}
+    .BannerSection .wrapper{height: auto;}
+    .BannerSection .bannerHeading{width: 100%;position: relative;top: unset;transform: unset;}
+    .BannerSection .bannerIconSec{width: 100%;bottom: unset;position: relative;margin-top: 50px;}
+    .BannerSection .bannerIconSec ul li {margin-right: 0px;width: 25%;}
+    .BannerSection .deskVideo{display: none;}
+	.BannerSection .mobVideo{display: block;}
+	.BannerSection .vimeo-wrapper iframe{width:100vw;height:100vh;top: 0;left: 0;transform: translate(0px, 0px);min-width: 100vw;}
+    .productSection .secHeadinng{width: 100%;}
+    .productSection .productContent{width: 100%;}
+    .productSection .productContent .productInfo{width: 100%;margin-bottom: 50px;}
+    .productSection .productContent .productInfo img{width: 80%;}
+    .testimonialSection .testimonialContent{width: 90%;margin-bottom: 50px;}
+    .testimonialSection .testimonialSliderBack {left: -20px;}
+    .testimonialSection .testimonialSliderForward {right: -20px;}
+    .testimonialSection .gallerySliderBack{left: -30px;}
+    .testimonialSection .gallerySliderForward{right: -30px;}
+    .testimonialSection .testimonialInfo .testimonialImg{width: 100%;}
+    .testimonialSection .testimonialInfo .testimonialImgInfo {width: 100%;padding: 20px 25px;}
+    .testimonialSection .testimonialInfo .testimonialwithImg .testimonialCustomer{position: relative;left:0px;bottom: 0px;}
+    .howtobuySection .secHeadinng{margin-top: 50px;}
+    .howtobuySection .howtobuyContent{display: none;}
+    .howtobuySection .howtobuyContentMob{display: block;}
+    .howtobuySection .howtobuyContentMob .howtobuyInfoMob{width: 280px;height: 280px;text-align: center;border: 1px solid #fff;border-radius: 50%;padding: 15px 20px;margin: 0 auto 50px;box-shadow: 1px 0px 50px rgba(193, 8, 251, 0.46);background: #170A3E;}
+    .howtobuySection .howtobuyContentMob .howtobuyInfoMob img{margin: 0 auto 5px;width: 35px;}
+    .howtobuySection .howtobuyContentMob .howtobuyInfoMob h3{margin-bottom: 5px;font-size: 16px;}
+    .howtobuySection .howtobuyContentMob .howtobuyInfoMob p{font-size: 13px;}
+    .howtobuySection .howtobuyContentMob .howtobuyInfoMob{display: block;}
+
+    .mediablogSection .secHeadinng{width: 100%;margin: 30px auto 15px;}
+    .mediablogSection .mediablogSec{width: 90%;margin-bottom: 50px;}
+    .mediablogSection .mediablogSliderBack {left: -25px;}
+    .mediablogSection .mediablogSliderForward {right: -25px;}
+    .certifiedSection .secHeadinng{width: 100%;margin-top: 50px;}
+    .certifiedSection .secHeadinng h2{margin-bottom: 20px;}
+    .certifiedSection .certifiedContent{width: 100%;margin-bottom: 50px;}
+    .certifiedSection .certifiedContent .certifiedInfo{flex-flow: wrap;}
+    .certifiedSection .certifiedContent .certifiedInfo .certifiedLogobox{width: 50%;margin: 30px 0px;}
+    .certifiedSection .certifiedContent .certifiedInfo .certifiedLogobox img{margin: 0 auto;width: 75%;}
+    .candidInstaSection .secHeadinng, .gallerySection .secHeadinng{margin: 30px 0px;}
+    .candidInstaSection .candidInstaContent .candidInstaInfo{height: 250px !important;}
+    .candidInstaSection .candidInstaContent{width:100%;margin-bottom: 50px;}
+    .candidInstaSection .sliderArrow{width: 30%;}
+    .gallerySection .slick-slider {margin-left: -15%;margin-right: -15%;}
+    .gallerySection .slick-list {padding-left: 10%!important;padding-right: 10%!important;}
+    .gallerySection .slidercontainer{width: 100%;margin-bottom: 50px;}
+    .gallerySection .gallerySliderBack{left: -45px;}
+    .gallerySection .gallerySliderForward{right: -45px;}
+    footer .footerTop .wrapper .footerBox{width: 50%;}
+ 
+    /*********************************************About Us CSS************************************************/
+	.aboutusBanner{padding: 120px 0px 80px;}
+	.aboutusBanner .aboutusBannerContent{width: 100%;}
+	.aboutusBanner .aboutusBannerContent .secHeading{margin-bottom: 25px;}
+	.decorationSectionOne .decorationOneImg{width: 100%;}
+	.decorationSectionOne .decorationOneContent{width: 100%;padding: 50px 20px;}
+	.decorationSectionOne .decorationOneContent h2{margin-bottom: 25px;}
+	.aboutusHighlightSection{padding: 80px 0px;}
+	.aboutusHighlightSection .aboutusHighlightContent{width: 100%; margin: 0 auto;}
+	.makeDifferenceSec{padding: 50px 0px;}
+	.makeDifferenceSec .makeDifferenceContent{width: 100%;}
+	.makeDifferenceSec .secHeading{margin-bottom: 30px;}
+	.makeDifferenceSec .makeDifferenceIcons{width: 100%;}
+	.makeDifferenceSec .makeDifferenceIcons ul li{width: 25%;}
+	.makeDifferenceSec .makeDifferenceInfo{width: 100%;padding-left: 0px;margin-top: 25px;}
+
+	/*********************************************FAQs CSS************************************************/
+	.faqsSection{padding: 120px 0px 80px;}
+	.faqsSection .faqsContent{width: 100%;}
+	.faqsSection .faqsContent .secHeading{margin-bottom: 20px;}
+	.faqsSection .faqsContent .faqsData .faqsQA{padding: 20px 0px;}
+	.faqsSection .faqsContent .faqsData .faqsQA .accordion_body{padding-top: 15px;}
+	.faqsSection .faqsContent .faqsData .loadCTAText{margin-top: 25px;}
+
+	/*********************************************Certifications CSS************************************************/
+	.certificateSection{padding: 120px 0px 80px;}
+	.certificateSection .secHeading{margin-bottom: 20px;}
+	.certificateSection .certificateContent{width: 100%;}
+	.certificateSection .certificateContent .certificateData{padding: 25px 0px;}
+	.certificateSection .certificateContent .certificateData .certificateLogo{width: 100%;}
+	.certificateSection .certificateContent .certificateData .certificateLogo img{margin: 10px auto 25px;}
+	.certificateSection .certificateContent .certificateData .certificateInfo{width: 100%;padding-left: 0px;}
+	.certificateSection .certificateContent .certificateData .certificateInfo h3{margin-bottom: 15px;}
+
+	/*********************************************Gallery CSS************************************************/
+	.gallerySectionPage{padding: 120px 0px 80px;}
+	.gallerySectionPage .secHeading{margin-bottom: 20px;}
+	.gallerySectionPage .galleryContent{width: 100%;}
+
+	/*********************************************Where To Buy CSS************************************************/
+	.wheretobuySection .wheretobuyData .countryData {width: 100%;}
+	.wheretobuySection .secHeading {margin-bottom: 30px;}
+
+	/*********************************************Trade Customer CSS************************************************/
+	.tradecustomerSection{padding: 120px 0px 80px;}
+	.tradecustomerSection .secHeading{margin-bottom: 30px;}
+	.tradecustomerBox{width: 100%;}
+	.tradecustomerBox .box-content {width: 100%;padding: 20px;margin-bottom: 40px;}
+	.tradecustomerBox .box-content:last-child {margin-bottom: 0px;}
+	.tradecustomerBox .box-content p{margin: 15px 0px;}
+
+	/*********************************************Our Products CSS************************************************/
+	.ourproductsSection{padding: 120px 0px 50px;}
+	.ourproductsSection .wrapper{padding: 0px;}
+	.ourproductsSection .tabs{overflow-x: scroll;}
+	.ourproductsSection .tab {padding: 10px 20px;}
+	.ourproductsSection .tab.active {border-bottom: 2px solid #fff;font-weight: 500;}
+	/*.tab:hover {background-color: #AAA;}*/
+	.ourproductsSection .tab-content {padding: 40px 20px 0px;}
+	.productsContent .productsGallery{width: 100%;}
+	.productsContent .productsGallery .gallerySliderthumb{width: 90%;margin: 0 auto;}
+	.productsContent .productsGallery .gallerySliderthumb .slick-slide{padding: 3px;}
+	.productsContent .productsInfo{width: 100%;padding: 25px 0px;}
+	.productsContent .productsInfo h2{margin-bottom: 15px;}
+	.productsContent .productsInfo p{margin-bottom: 15px;}
+	.productsContent .productsInfo ul{margin-bottom: 20px;}
+	.productsContent .productsInfo ul li.colorCircle{width: 20px;height: 20px;margin-right: 15px;}
+	#loadMore, #loadLess{width: 20px;height: 20px;line-height: 20px;}
+	.productsContent .productsInfo .productsFeatures{display: flex;flex-flow: wrap;margin-bottom: 15px;}
+	.productsContent .productsInfo .productsFeatures .productsFeaturesInfo{margin-right: 20px;}
+	.cta{text-decoration: none; letter-spacing: 0.15em; text-align: center; background: linear-gradient(135deg, #4266CF 5.54%, #C306FB 64.52%, #CC01FF 90.94%); border-radius: 5px; justify-content: center; align-items: center; padding: 13px 48px;}
+
+	/*********************************************Trade Customer InnerPage CSS************************************************/
+	.tradecustomformSection{padding: 120px 0px 80px;}
+	.tradecustomformSection .formBox{width: 100%;}
+	.tradecustomformSection .formBox .backcta{margin-bottom: 25px;}
+	.tradecustomformSection .formBox .tradecustomerInfo{margin-bottom: 25px;}
+	.tradecustomformSection .formBox .formRow{margin-bottom: 0px;}
+	.tradecustomformSection .formBox .formRow .inputElement{width: 100%;margin-bottom: 15px;}
+	.tradecustomformSection .formBox .formRow .inputElementFull{width: 100%;}
+	.tradecustomformSection .formBox .formRow .inputElementFull textarea{min-height: 100px;}
+	.tradecustomformSection .formBox .checkboxRow{display: block;}
+	.tradecustomformSection .formBox .checkboxHold{margin-bottom: 15px;}
+}
+@media all and (max-width: 770px) {}
+@media all and (max-width: 768px) {
+	.box{width: 90%;}
+	.popup{width: 90%;}
+	.popup_box {padding: 30px 15px;}
+	.popup .close {top: 5px;right: 10px;font-size: 30px;}
+}
+@media all and (max-width: 760px) {}
+@media all and (max-width: 640px) {
+	.wrapper{padding: 0 20px;position: relative;}
+	.font95{font-size: 48px;}
+	.font60{font-size: 32px;}
+	.font40{font-size: 28px;}
+	.font28{font-size: 22px;}
+	.font24{font-size: 18px;}
+	.font20{font-size: 16px;}
+	.font18{font-size: 16px;}
+	.font16{font-size: 14px;}
+	.main-nav .baseMenu ul li a{font-size: 24px !important;line-height: 1;letter-spacing: 0.05em;}
+	.main-nav .productMenu h3{font-size: 24px !important;line-height: 1;margin-top: 20px;}
+	.main-nav .productMenu h3 a{font-size: 24px !important;line-height: 1;letter-spacing: 0.05em;}
+	.main-nav .productMenu .productsubMenu li a{font-size: 16px;}
+	.main-nav .productMenu .productsubMenu{margin-bottom: 8px;}
+	.nav-footer .headerContactdetails ul li{margin-bottom: 8px;}
+	.nav-footer {padding: 10px 0px;}
+	.nav-footer .headersocialSites ul{margin-bottom: 8px;}
+	.nav-footer .headerContactdetails ul li a{font-size: 16px;}
+	.nav-footer .headersocialSites ul li img {width: 30px;}
+	.termsCondition h2, .privacyPolicy h2{font-size:28px;}
+	.termsCondition h4, .privacyPolicy h4{font-size:18px;}
+}
+@media all and (max-width: 500px) {}
+@media all and (max-width: 400px) {}
+@media all and (max-width: 340px) {
+	.main-nav .baseMenu ul li, .main-nav .productMenu h3{margin-bottom: 8px;}
+	.main-nav .baseMenu ul li a{font-size: 22px !important;line-height: 1;}
+	.main-nav .productMenu h3{font-size: 22px !important;line-height: 1;}
+	.main-nav .productMenu h3{margin-top: 15px;}
+	.main-nav .productMenu h3 a{font-size: 22px !important;line-height: 1;}
+}
